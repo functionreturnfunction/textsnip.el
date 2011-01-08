@@ -1,0 +1,22 @@
+* About
+ This file adds a command called "post-to-textsnip".  When invoked, it will
+ post text to textsnip.com for simple/formatted sharing.  If invoked with an
+ active region, it will use the text within that region, else it will use the
+ entirety of the text within the current buffer.  The resulting url from
+ textsnip will then be placed in the kill-ring, as well as the os clipboard
+ where applicable.  If the current major mode is listed in
+ textsnip/mode-alist, the url will be ammended with the corresponding
+ textsnip mode for convenience (saves a mouse click or two).
+
+* Dependencies
+ This package depends on the package http-post-simple, which can be attained
+ at http://www.emacswiki.org/emacs/http-post-simple.el
+
+* Installation
+ To install, copy this file to a path accessible by emacs (specified in
+ load-path), and require it using:
+ (require 'textsnip)
+
+* Usage
+ To use, invoke with M-x "post-to-textsnip".  This can optionally be bound to
+ a key sequence.
